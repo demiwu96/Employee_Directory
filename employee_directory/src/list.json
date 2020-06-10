@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "firstName": "Demi",
+      "lastName":"Wu",
+      "employeeID": 355740,
+      "phone": "0112345678",
+      "department": "Being a Neko Chao <3"
+    },
+    {
+      "id": 2,
+      "firstName": "Lisa",
+      "lastName": "Chen",
+      "employeeID": 355760,
+      "phone": "0112345678",
+      "department": "Sales"
+    },
+    {
+      "id": 3,
+      "firstName": "Mark",
+      "lastName": "Huang",
+      "employeeID": 355750,
+      "phone": "0112345678",
+      "department": "Sales"
+    },
+    {
+        "id": 4,
+        "firstName": "Tomas",
+        "lastName": "Liu",
+        "employeeID": 355720,
+        "phone": "0112345678",
+        "department": "Human Resources"
+      }
+
+  ]
