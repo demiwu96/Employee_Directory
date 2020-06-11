@@ -7,7 +7,7 @@ const styles = {
         width: "600px"
     },
     textStyle: {
-        color: "#f25713",
+        color: "#286489",
         fontSize: "20px",
         fontWeight: "bold"
     }
@@ -38,54 +38,56 @@ class SortAndFilter extends Component {
         });
     };
 
-    // sort according to 
-    // sortList = option => {
-    //     let newList;
-    //     switch (option) {
-    //         case "firstName":
-    //             // code
-    //             newList = List.sort(function (a, b) { return a.firstName - b.firstName });
-    //             break;
-    //         case "lasttName":
-    //             // code block
-    //             newList = List.sort(function (a, b) { return a.lastName - b.lastName });
-    //             break;
-    //         case "employeeID":
-    //             // code block
-    //             newList = List.sort(function (a, b) { return a.employeeID - b.employeeID });
-    //             break;
-    //         case "department":
-    //             newList = List.sort(function (a, b) { return a.department - b.department });
-    //             break;
-    //         default:
-    //             return;
-    //     }
-    //     this.setState({
-    //         list: newList
-    //     });
-    // };
+    // sort according to different choices
+    sortList = (option) => {
+        List.sort(function (a, b) {
+            if (a[option] > b[option])
+                return 1;
+            else if (a[option] < b[option])
+                return -1;
+
+            return 0;
+        });
+
+        this.setState({
+            list: List
+        });
+    }
+
+    generateOptions = () => {
+        let departmentArray = [];
+        List.forEach(function (item) {
+            if (!departmentArray.includes(item["department"])) {
+                departmentArray.push(item["department"]);
+            } 
+        });
+
+        departmentArray.sort();
+        return departmentArray.map(item => {
+           return <option>{item}</option>
+        });
+    };
 
     render() {
         return (
             <div className="mx-auto pt-3 pb-3" style={styles.divStyle}>
                 <form className="form-inline">
-                    <div className="form-group">
+                    <div className="form-group mb-4 pt-4">
                         <label htmlFor="department" style={styles.textStyle}>Filter By Department</label>
-                        <select className="form-control ml-2" id="department" onChange={this.handleChange}>
+                        <select className="form-control ml-3" id="department" onChange={this.handleChange}>
                             <option defaultValue>Choose a department</option>
-                            <option value="Sales">Sales</option>
-                            <option value="Human Resources">Human Resources</option>
+                            {this.generateOptions()}
                         </select>
                     </div>
-                    <button type="submit" className="btn btn-info ml-5" onClick={this.handleSubmit}>Submit</button>
+                    <button type="submit" className="btn btn-info ml-4 my-auto" onClick={this.handleSubmit}>Submit</button>
                 </form>
                 <div className="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-                    <p style={styles.textStyle}>Sort By</p>
-                    <div className="btn-group mr-2" role="group" aria-label="sort options">
-                        <button type="button" className="btn btn-info" onClick={this.sortList("firstName")}>First Name</button>
-                        <button type="button" className="btn btn-info" onClick={this.sortList("lastName")}>Last Name</button>
-                        <button type="button" className="btn btn-info" onClick={this.sortList("employeeID")}>Employee ID</button>
-                        <button type="button" className="btn btn-info" onClick={this.sortList("department")}>Department</button>
+                    <p className="mt-2" style={styles.textStyle}>Sort By </p>
+                    <div className="btn-group ml-4" role="group" aria-label="sort options">
+                        <button type="button" className="btn btn-info" onClick={() => this.sortList("firstName")}>First Name</button>
+                        <button type="button" className="btn btn-info" onClick={() => this.sortList("lastName")}>Last Name</button>
+                        <button type="button" className="btn btn-info" onClick={() => this.sortList("employeeID")}>Employee ID</button>
+                        <button type="button" className="btn btn-info" onClick={() => this.sortList("department")}>Department</button>
                     </div>
                 </div>
                 <Table list={this.state.list} />

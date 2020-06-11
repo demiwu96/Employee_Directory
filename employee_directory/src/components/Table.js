@@ -2,7 +2,7 @@ import React from "react";
 
 const styles = {
   thead: {
-    background: "#f6ab6c"
+    background: "#8bdae3"
   }
 };
 
