@@ -4,7 +4,7 @@ import Table from "../Table";
 
 const styles = {
     divStyle: {
-        width: "600px"
+        width: "80%"
     },
     textStyle: {
         color: "#286489",
@@ -70,8 +70,9 @@ class SortAndFilter extends Component {
 
     render() {
         return (
-            <div className="mx-auto pt-3 pb-3" style={styles.divStyle}>
-                <form className="form-inline">
+            <div className="pt-3 pb-3">
+                <div className="mx-auto" style={styles.divStyle}>
+                   <form className="form-inline">
                     <div className="form-group mb-4 pt-4">
                         <label htmlFor="department" style={styles.textStyle}>Filter By Department</label>
                         <select className="form-control ml-3" id="department" onChange={this.handleChange}>
@@ -82,14 +83,16 @@ class SortAndFilter extends Component {
                     <button type="submit" className="btn btn-info ml-4 my-auto" onClick={this.handleSubmit}>Submit</button>
                 </form>
                 <div className="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-                    <p className="mt-2" style={styles.textStyle}>Sort By </p>
+                    <p className="mt-2" style={styles.textStyle}>Sort in ascending order by: </p>
                     <div className="btn-group ml-4" role="group" aria-label="sort options">
                         <button type="button" className="btn btn-info" onClick={() => this.sortList("firstName")}>First Name</button>
                         <button type="button" className="btn btn-info" onClick={() => this.sortList("lastName")}>Last Name</button>
                         <button type="button" className="btn btn-info" onClick={() => this.sortList("employeeID")}>Employee ID</button>
                         <button type="button" className="btn btn-info" onClick={() => this.sortList("department")}>Department</button>
                     </div>
+                </div> 
                 </div>
+                
                 <Table list={this.state.list} />
             </div>
         );
