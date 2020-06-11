@@ -1,35 +1,84 @@
 [
     {
       "id": 1,
-      "firstName": "Demi",
+      "firstName": "Crystal",
       "lastName":"Wu",
-      "employeeID": 355740,
+      "employeeID": 352740,
       "phone": "0112345678",
-      "department": "Being a Neko Chao <3"
+      "department": "IT"
     },
     {
       "id": 2,
-      "firstName": "Lisa",
+      "firstName": "Megan",
       "lastName": "Chen",
-      "employeeID": 355760,
+      "employeeID": 455760,
       "phone": "0112345678",
       "department": "Sales"
     },
     {
       "id": 3,
       "firstName": "Mark",
-      "lastName": "Huang",
-      "employeeID": 355750,
+      "lastName": "Walters",
+      "employeeID": 395790,
       "phone": "0112345678",
       "department": "Sales"
     },
     {
         "id": 4,
-        "firstName": "Tomas",
-        "lastName": "Liu",
-        "employeeID": 355720,
+        "firstName": "Terry",
+        "lastName": "Daniels",
+        "employeeID": 325730,
         "phone": "0112345678",
         "department": "Human Resources"
       }
+      ,
+    {
+        "id": 5,
+        "firstName": "Tina",
+        "lastName": "Liu",
+        "employeeID": 358720,
+        "phone": "0112345678",
+        "department": "Human Resources"
+      },
+      {
+          "id": 6,
+          "firstName": "Yasmine",
+          "lastName": "Robinson",
+          "employeeID": 155760,
+          "phone": "0112345678",
+          "department": "Finance"
+        },
+        {
+            "id": 7,
+            "firstName": "Louis",
+            "lastName": "Morgan",
+            "employeeID": 354700,
+            "phone": "0112345678",
+            "department": "Human Resources"
+          },
+          {
+              "id": 8,
+              "firstName": "Simon",
+              "lastName": "Thompson",
+              "employeeID": 355920,
+              "phone": "0112345678",
+              "department": "Finance"
+            },
+            {
+              "id": 9,
+              "firstName": "David",
+              "lastName": "Mcdonald",
+              "employeeID": 355650,
+              "phone": "0112345678",
+              "department": "IT"
+            },
+            {
+              "id": 10,
+              "firstName": "Kevin",
+              "lastName": "Liu",
+              "employeeID": 353770,
+              "phone": "0112345678",
+              "department": "Legal"
+            }
 
   ]

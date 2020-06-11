@@ -12,8 +12,8 @@ function Table(props) {
       <thead style={styles.thead}>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
           <th scope="col">Employee ID</th>
           <th scope="col">Phone Number</th>
           <th scope="col">Department</th>
