@@ -13,4 +13,4 @@ An app for viewing employee information. The user can view all the employee info
 Yu-Hsuan Wu
 
 ## Demo
-[Click here](https://budget-tracker-pwa-052020.herokuapp.com/) to see my project
+[Click here](https://employeedirectory-062020.herokuapp.com/) to see my project
